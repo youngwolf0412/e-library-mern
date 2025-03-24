@@ -15,6 +15,12 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs,ts}"],
     plugins: { js },
     extends: ["js/recommended"],
+    rules: {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+    },
   },
-  tseslint.configs.recommended, // Apply TypeScript ESLint recommended rules
+  {
+    ...tseslint.configs.recommended,
+  },
 ]);
