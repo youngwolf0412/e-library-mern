@@ -8,6 +8,7 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
     const error = createHttpError(400, "All fields are required");
     return next(error);
   }
+  // db call
   res.json({ message: "User created" });
 };
 
